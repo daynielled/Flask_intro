@@ -11,7 +11,7 @@ def add_nums():
     a = int(request.args.get("a"))
     b = int(request.args.get("b"))
     total = add(a,b)
-    return total
+    return str(total)
 
 @app.route("/sub")
 def sub_numns():
@@ -20,7 +20,7 @@ def sub_numns():
     a = int(request.args.get("a"))
     b = int(request.args.get("b"))
     total = sub(a,b)
-    return total
+    return str(total)
 
 @app.route("/mult")
 def mult_nums():
@@ -29,7 +29,7 @@ def mult_nums():
     a = int(request.args.get("a"))
     b = int(request.args.get("b"))
     total = mult(a,b)
-    return total
+    return str(total)
 
 @app.route("/div")
 def div_nums():
@@ -38,7 +38,7 @@ def div_nums():
     a = int(request.args.get("a"))
     b = int(request.args.get("b"))
     total = div(a,b)
-    return total
+    return str (total)
 
 
 
@@ -55,3 +55,4 @@ def do_math(operation):
     a = int(request.args.get("a"))
     b = int(request.args.get("b"))
     result = OPERATORS[operation](a,b)
+    return str(result)
